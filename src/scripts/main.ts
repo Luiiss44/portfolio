@@ -15,7 +15,7 @@ const $$ = <T extends Element = HTMLElement>(s: string, el: ParentNode = documen
 /* ---------- Smooth scroll ---------- */
 let lenis: Lenis | null = null;
 if (!reduced) {
-  lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
+  lenis = new Lenis({ lerp: 0.14, smoothWheel: true });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => lenis!.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -153,7 +153,7 @@ function scrollFx() {
       ease: 'expo.inOut',
       scrollTrigger: { trigger: photo, start: 'top 80%' },
     });
-    gsap.fromTo(photo.querySelector('img'), { yPercent: -8 }, {
+    gsap.fromTo(photo.querySelector('img'), { yPercent: -6 }, {
       yPercent: 0,
       ease: 'none',
       scrollTrigger: { trigger: '.about', start: 'top bottom', end: 'bottom top', scrub: true },
@@ -211,7 +211,7 @@ function work() {
         start: 'top top',
         end: () => `+=${distance()}`,
         pin: true,
-        scrub: 1,
+        scrub: 0.3,
         invalidateOnRefresh: true,
         anticipatePin: 1,
         onUpdate: (st) => bar && gsap.set(bar, { scaleX: st.progress }),

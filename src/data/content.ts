@@ -17,7 +17,7 @@ const es = {
     description:
       'Ingeniero de software full-stack. Cofundador de dos productos con IA en piloto con clientes: Zeonida (asistente jurídico en Rust + React) e Inmovira (SaaS inmobiliario). Último curso de Ingeniería de Software. Madrid.',
   },
-  nav: { work: 'Proyectos', about: 'Perfil', experience: 'Trayectoria', contact: 'Contacto', cv: 'CV', other: 'EN', otherHref: '/en/' },
+  nav: { work: 'Proyectos', about: 'Sobre mí', experience: 'Trayectoria', contact: 'Contacto', cv: 'CV', other: 'EN', otherHref: '/en/' },
   loader: 'Cargando portfolio',
   hero: {
     eyebrow: 'Ingeniero de software · Madrid',
@@ -31,7 +31,7 @@ const es = {
     available: 'Disponible para nuevos proyectos',
   },
   about: {
-    label: 'Perfil',
+    label: 'Sobre mí',
     statement:
       'Me gusta llevar ideas a producción. Trabajo en todo el stack — Rust, TypeScript, Python y SQL — con obsesión por la seguridad, la privacidad de los datos y los detalles que el usuario nota.',
     body:
@@ -200,7 +200,7 @@ const en: typeof es = {
     available: 'Open to new opportunities',
   },
   about: {
-    label: 'About',
+    label: 'About me',
     statement:
       'I love taking ideas to production. I work across the stack — Rust, TypeScript, Python and SQL — obsessed with security, data privacy and the details users notice.',
     body:

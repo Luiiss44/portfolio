@@ -87,8 +87,8 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
       <p class="label" data-reveal>{t.about.label}</p>
       <div class="about__grid">
         <figure class="about__photo" data-photo>
-          <div class="about__photo-mask"><img src="/img/luis.webp" alt={site.name} width="720" height="720" loading="lazy" /></div>
-          <figcaption>Madrid · 40.4° N</figcaption>
+          <div class="about__photo-mask"><img src="/img/luis.webp" alt={site.name} width="960" height="1200" decoding="async" /></div>
+          <figcaption>{site.name} · Madrid</figcaption>
         </figure>
         <div class="about__text">
           <p class="about__statement" data-words>{t.about.statement}</p>

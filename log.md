@@ -31,3 +31,9 @@
 - Información de contacto: luis.inmovira.com (cartera), inmovira.com y zeonida.com (empresa), github.com/Luiiss44 (otro). LinkedIn admitió 4 sitios aunque varias guías hablan de 3.
 - Zeonida e Inmovira se mantienen en «Experiencia»: tienen producto desplegado, clientes piloto y Luis es cofundador con socios; las descripciones ya dicen que están en piloto.
 - «Acerca de» reescrito siguiendo buenas prácticas investigadas: gancho con palabras clave en los ~200 primeros caracteres (lo visible antes de «ver más»), primera persona, proyectos con datos, lista de skills y cierre con email, portfolio y GitHub; unas 230 palabras.
+
+## 2026-10-27 (noche) — Rendimiento, foto y etiquetas
+
+- Lag: shader con 4 octavas (antes 6), render al 35 % de la resolución CSS y a 30 fps; capa de grano estática (antes animada y al 200 % de la pantalla); cursor sin mix-blend-mode ni transiciones de tamaño; menú sin backdrop-filter; scroll más directo (Lenis lerp 0.14, scrub 0.3).
+- Foto: nueva versión 960×1200 (4:5, calidad 90) sin el filtro gris que solo se quitaba al pasar el ratón.
+- Etiquetas de sección sin raya ni mayúsculas espaciadas: cursiva serif en color de acento; «Perfil» pasa a «Sobre mí».

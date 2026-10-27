@@ -27,7 +27,7 @@ float noise(vec2 p){
 float fbm(vec2 p){
   float v = 0.0, a = 0.5;
   mat2 r = mat2(0.8, -0.6, 0.6, 0.8);
-  for (int i = 0; i < 6; i++){ v += a * noise(p); p = r * p * 2.02; a *= 0.5; }
+  for (int i = 0; i < 4; i++){ v += a * noise(p); p = r * p * 2.02; a *= 0.5; }
   return v;
 }
 
@@ -59,8 +59,6 @@ void main(){
   float vign = smoothstep(1.25, 0.25, length((uv - vec2(0.62, 0.62)) * vec2(1.1, 1.4)));
   col = mix(deep, col, vign * 0.95);
 
-  // subtle film lines
-  col *= 0.97 + 0.03 * sin(gl_FragCoord.y * 1.5);
   gl_FragColor = vec4(col * uFade, 1.0);
 }
 `;
@@ -94,8 +92,9 @@ export function startShader(canvas: HTMLCanvasElement) {
   const uMouse = gl.getUniformLocation(prog, 'uMouse');
   const uFade = gl.getUniformLocation(prog, 'uFade');
 
-  // Render at reduced resolution: the image is soft anyway and it keeps laptops cool.
-  const scale = Math.min(window.devicePixelRatio, 1.5) * 0.6;
+  // Render at a fraction of the CSS resolution: the image is soft anyway and the
+  // browser upscales it for free. Keeps integrated GPUs well under budget.
+  const scale = 0.35;
   const resize = () => {
     const w = Math.max(1, Math.floor(canvas.clientWidth * scale));
     const h = Math.max(1, Math.floor(canvas.clientHeight * scale));
@@ -121,9 +120,12 @@ export function startShader(canvas: HTMLCanvasElement) {
   const t0 = performance.now();
   new IntersectionObserver(([e]) => (visible = e.isIntersecting)).observe(canvas);
 
+  // The flow is slow, so 30 fps is indistinguishable from 60 and halves the GPU work.
+  let lastDraw = 0;
   const frame = (now: number) => {
     raf = requestAnimationFrame(frame);
-    if (!visible) return;
+    if (!visible || document.hidden || now - lastDraw < 32) return;
+    lastDraw = now;
     mouse.x += (mouse.tx - mouse.x) * 0.04;
     mouse.y += (mouse.ty - mouse.y) * 0.04;
     fade += (targetFade - fade) * 0.03;
