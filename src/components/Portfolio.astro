@@ -1,0 +1,212 @@
+---
+import Base from '../layouts/Base.astro';
+import { content, site, type Lang } from '../data/content';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = content[lang];
+const base = lang === 'es' ? '/' : '/en/';
+const marquee = t.skills.groups.flatMap((g) => g.items).slice(0, 22);
+const pad = (n: number) => String(n + 1).padStart(2, '0');
+---
+<Base lang={lang}>
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">{site.short}</span>
+      <span class="loader__count"><span data-count>0</span>%</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em></em></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="nav__logo" href={base} aria-label={site.name}>
+      <span class="nav__mark">LM</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#work" data-magnetic>{t.nav.work}</a>
+      <a href="#about" data-magnetic>{t.nav.about}</a>
+      <a href="#journey" data-magnetic>{t.nav.experience}</a>
+      <a href="#contact" data-magnetic>{t.nav.contact}</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__lang" href={t.nav.otherHref} hreflang={t.nav.other.toLowerCase()} data-magnetic>{t.nav.other}</a>
+      <a class="btn btn--small" href={t.contact.cvHref} download data-magnetic><span>{t.nav.cv}</span><i>↓</i></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="hero__gl" data-gl aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <div class="hero__content wrap">
+        <p class="eyebrow hero__eyebrow" data-hero-fade>
+          <span class="pulse"></span>{t.hero.available}
+        </p>
+        <h1 class="hero__title" aria-label={t.hero.lines.join(' ')}>
+          {t.hero.lines.map((line, i) => (
+            <span class="line" aria-hidden="true"><span class:list={['line__in', { serif: i === t.hero.lines.length - 1 }]}>{line}</span></span>
+          ))}
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lead" data-hero-fade>{t.hero.lead}</p>
+          <div class="hero__meta" data-hero-fade>
+            <div class="roles" aria-label={t.hero.roles.join(', ')}>
+              <span class="roles__label">{t.hero.eyebrow}</span>
+              <span class="roles__track" aria-hidden="true">
+                {t.hero.roles.map((r) => <span class="roles__item">{r}</span>)}
+              </span>
+            </div>
+            <div class="hero__ctas">
+              <a class="btn btn--primary" href="#work" data-magnetic><span>{t.hero.ctaWork}</span><i>→</i></a>
+              <a class="btn btn--ghost" href={t.contact.cvHref} download data-magnetic><span>{t.hero.ctaCv}</span><i>↓</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#about" data-hero-fade><span>{t.hero.scroll}</span><i></i></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Stack">
+      <div class="marquee__row" data-marquee>
+        {[0, 1].map(() => (
+          <div class="marquee__group" aria-hidden="true">
+            {marquee.map((m) => <span class="marquee__item">{m}<b>✦</b></span>)}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about wrap" id="about">
+      <p class="label" data-reveal>{t.about.label}</p>
+      <div class="about__grid">
+        <figure class="about__photo" data-photo>
+          <div class="about__photo-mask"><img src="/img/luis.webp" alt={site.name} width="720" height="720" loading="lazy" /></div>
+          <figcaption>Madrid · 40.4° N</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="about__statement" data-words>{t.about.statement}</p>
+          <p class="about__body" data-reveal>{t.about.body}</p>
+        </div>
+      </div>
+      <ul class="stats">
+        {t.about.stats.map((s) => (
+          <li class="stat" data-reveal>
+            <span class="stat__value"><span data-counter={s.value}>0</span>{s.suffix}</span>
+            <span class="stat__label">{s.label}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- WORK (pinned horizontal) -->
+    <section class="work" id="work">
+      <div class="work__pin" data-work>
+        <div class="work__head wrap">
+          <p class="label">{t.work.label}</p>
+          <h2 class="h2">{t.work.title}</h2>
+          <p class="work__hint">{t.work.hint} <i>⟶</i></p>
+        </div>
+        <div class="work__track" data-track>
+          {t.projects.map((p, i) => (
+            <article class:list={['card', { 'card--feature': !!p.image }]} style={`--accent:${p.accent}`} data-card>
+              <div class="card__inner" data-tilt>
+                <div class="card__visual">
+                  {p.image ? (
+                    <img src={p.image} alt={`${p.name}`} loading="lazy" width="1200" height="658" />
+                  ) : (
+                    <div class="card__art" aria-hidden="true"><span>{p.name.slice(0, 1)}</span></div>
+                  )}
+                  <span class="card__index">{pad(i)}</span>
+                </div>
+                <div class="card__body">
+                  <div class="card__main">
+                    <div class="card__top">
+                      <h3 class="card__title">{p.name}</h3>
+                      <span class="card__year">{p.year}</span>
+                    </div>
+                    <p class="card__role">{p.role}</p>
+                    <p class="card__tagline">{p.tagline}</p>
+                  </div>
+                  <ul class="card__bullets">{p.bullets.map((b) => <li>{b}</li>)}</ul>
+                  <div class="card__foot">
+                    <ul class="tags">{p.stack.map((s) => <li>{s}</li>)}</ul>
+                    <div class="card__links">
+                      {p.url && <a href={p.url} target="_blank" rel="noopener" data-magnetic>{t.work.visit} ↗</a>}
+                      {p.repo && <a href={p.repo} target="_blank" rel="noopener" data-magnetic>{t.work.code} ↗</a>}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="work__progress" aria-hidden="true"><span data-progress></span></div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey wrap" id="journey">
+      <p class="label" data-reveal>{t.experience.label}</p>
+      <h2 class="h2" data-split>{t.experience.title}</h2>
+      <ol class="timeline" data-timeline>
+        <span class="timeline__line" aria-hidden="true"><span data-line></span></span>
+        {t.experience.items.map((e) => (
+          <li class="tl" data-reveal>
+            <span class="tl__dot" aria-hidden="true"></span>
+            <span class="tl__when">{e.when}</span>
+            <div class="tl__body">
+              <h3 class="tl__what">{e.what}</h3>
+              <p class="tl__where">{e.where}</p>
+              <p class="tl__text">{e.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills wrap">
+      <p class="label" data-reveal>{t.skills.label}</p>
+      <h2 class="h2" data-split>{t.skills.title}</h2>
+      <div class="skills__grid">
+        {t.skills.groups.map((g) => (
+          <div class="skill" data-reveal data-glow>
+            <h3>{g.name}</h3>
+            <ul>{g.items.map((it) => <li>{it}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="label" data-reveal>{t.contact.label}</p>
+        <h2 class="contact__title" data-split>{t.contact.title[0]}</h2>
+        <p class="contact__lead" data-reveal>{t.contact.lead}</p>
+        <div class="contact__row" data-reveal>
+          <a class="contact__mail" href={`mailto:${site.email}`} data-magnetic>{site.email}</a>
+          <button class="btn btn--ghost" type="button" data-copy={site.email} data-copied={t.contact.copied}><span>{t.contact.copy}</span><i>⧉</i></button>
+        </div>
+        <div class="contact__links" data-reveal>
+          <a class="btn btn--primary" href={t.contact.cvHref} download data-magnetic><span>{t.contact.cv}</span><i>↓</i></a>
+          <a class="pill" href={site.linkedin} target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+          <a class="pill" href={site.github} target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+        </div>
+      </div>
+      <div class="contact__big" aria-hidden="true" data-bigname>{site.short}</div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© {new Date().getFullYear()} · {t.footer.made}</span>
+    <a href="#top" data-magnetic>{t.footer.top} ↑</a>
+  </footer>
+</Base>

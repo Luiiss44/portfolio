@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Datos personales que no van al repositorio público
+raw/
+cv/private.json
+cv/foto.png
+cv/CV_*.pdf
+cv/CV_*.html
+envio/candidaturas.csv
