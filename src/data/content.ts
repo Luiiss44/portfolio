@@ -204,7 +204,7 @@ const en: typeof es = {
     statement:
       'I love taking ideas to production. I work across the stack — Rust, TypeScript, Python and SQL — obsessed with security, data privacy and the details users notice.',
     body:
-      'I co-founded Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI, where I built the platform and the website. Both are piloting with their first customers. I'm in the final year of a BSc in Software Engineering (U-tad, Data Engineering track) and trained at 42 Madrid.',
+      'I co-founded Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI, where I built the platform and the website. Both are piloting with their first customers. I’m in the final year of a BSc in Software Engineering (U-tad, Data Engineering track) and trained at 42 Madrid.',
     stats: [
       { value: 2, suffix: '', label: 'SaaS products co-founded, piloting with customers' },
       { value: 500, suffix: '+', label: 'commits in 2026' },
