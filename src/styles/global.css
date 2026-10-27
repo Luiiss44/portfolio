@@ -292,7 +292,7 @@ h1, h2, h3, p { margin: 0; }
 .footer a:hover { color: var(--fg); }
 
 /* Initial states set only when JS animations will run */
-.js:not(.reduced) [data-reveal] { opacity: 0; transform: translateY(40px); }
+.js:not(.reduced) [data-reveal] { opacity: 0; transform: translateY(24px); }
 .js:not(.reduced) [data-hero-fade] { opacity: 0; transform: translateY(24px); }
 .js:not(.reduced) .hero__title .line__in { transform: translateY(105%); }
 

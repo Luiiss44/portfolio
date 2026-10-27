@@ -107,9 +107,9 @@ function scrollFx() {
     gsap.to(el, {
       opacity: 1,
       y: 0,
-      duration: 1.2,
-      ease: 'expo.out',
-      scrollTrigger: { trigger: el, start: 'top 88%' },
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 97%' },
     }),
   );
 
@@ -118,10 +118,10 @@ function scrollFx() {
     const split = SplitText.create(el, { type: 'chars,words', mask: 'chars' });
     gsap.from(split.chars, {
       yPercent: 110,
-      duration: 1.1,
-      ease: 'expo.out',
-      stagger: 0.018,
-      scrollTrigger: { trigger: el, start: 'top 85%' },
+      duration: 0.7,
+      ease: 'power3.out',
+      stagger: 0.012,
+      scrollTrigger: { trigger: el, start: 'top 95%' },
     });
   });
 
@@ -137,14 +137,15 @@ function scrollFx() {
     });
   }
 
-  // Photo: unclip
+  // Photo: a short fade that starts as soon as it peeks in. A long reveal reads as a slow-loading image.
   const photo = $('[data-photo]');
   if (photo) {
     gsap.from(photo.querySelector('.about__photo-mask'), {
-      clipPath: 'inset(100% 0 0 0 round 24px)',
-      duration: 1.6,
-      ease: 'expo.inOut',
-      scrollTrigger: { trigger: photo, start: 'top 80%' },
+      autoAlpha: 0,
+      scale: 0.97,
+      duration: 0.5,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: photo, start: 'top bottom' },
     });
   }
 
