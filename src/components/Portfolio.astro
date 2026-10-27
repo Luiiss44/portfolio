@@ -119,7 +119,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
               <div class="card__inner" data-tilt>
                 <div class="card__visual">
                   {p.image ? (
-                    <img src={p.image} alt={`${p.name}`} loading="lazy" width="1200" height="658" />
+                    <img src={p.image} alt={`${p.name}`} decoding="async" width="1200" height="658" />
                   ) : (
                     <div class="card__art" aria-hidden="true"><span>{p.name.slice(0, 1)}</span></div>
                   )}
