@@ -17,3 +17,13 @@
   - «Acerca de» reescrito sin «Soy estudiante…», con Zeonida, Inmovira y enlace al portfolio.
   - Experiencia añadida: Zeonida (oct. 2026–hoy) e Inmovira (jul. 2026–hoy), sin avisar a la red ni publicar en el feed.
   - Aptitudes nuevas: Rust y PostgreSQL (vinculadas a Zeonida). Educación sin cambios.
+
+## 2026-10-27 (tarde) — Ajustes pedidos por Luis
+
+- Luis es **cofundador de ambos** proyectos; en Inmovira además desarrolló la plataforma y la web. Ninguno es todavía empresa constituida: están **en piloto con sus primeros clientes**.
+- Web y CV: Inmovira pasa a «Cofundador · Ingeniero full-stack»; se sustituye «en producción» por «en piloto con clientes»; el perfil menciona el último curso del Grado.
+- LinkedIn pasado al inglés:
+  - Titular: «Software Engineer | Final-year Software Engineering student @ U-tad | Rust · TypeScript · AI | Co-founder @ Zeonida & Inmovira».
+  - «Acerca de» en inglés, abierto también a prácticas («roles and internships»).
+  - Puestos: «Co-founder & Software Engineer» (Zeonida) y «Co-founder & Full-Stack Engineer» (Inmovira), descripción en inglés, sin tipo de empleo (antes «Autónomo», que sugería alta como autónomo).
+  - Sin avisar a la red ni publicar en el feed.
