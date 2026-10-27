@@ -15,7 +15,7 @@ const es = {
   meta: {
     title: 'Luis Marquina — Ingeniero de software full-stack · IA aplicada',
     description:
-      'Ingeniero de software full-stack. Construyo productos con IA en producción: Zeonida (asistente jurídico en Rust + React) e Inmovira (SaaS inmobiliario). Madrid.',
+      'Ingeniero de software full-stack. Cofundador de dos productos con IA en piloto con clientes: Zeonida (asistente jurídico en Rust + React) e Inmovira (SaaS inmobiliario). Último curso de Ingeniería de Software. Madrid.',
   },
   nav: { work: 'Proyectos', about: 'Perfil', experience: 'Trayectoria', contact: 'Contacto', cv: 'CV', other: 'EN', otherHref: '/en/' },
   loader: 'Cargando portfolio',
@@ -24,7 +24,7 @@ const es = {
     lines: ['Construyo', 'software que', 'piensa.'],
     roles: ['Full-stack', 'IA aplicada', 'Rust · TypeScript', 'Datos', 'Producto'],
     lead:
-      'Diseño, programo y despliego productos completos: del modelo de datos y la seguridad a la interfaz. Dos SaaS con IA en producción en 2026.',
+      'Diseño, programo y despliego productos completos: del modelo de datos y la seguridad a la interfaz. En 2026 he cofundado y lanzado dos SaaS con IA, ya en piloto con sus primeros clientes.',
     ctaWork: 'Ver proyectos',
     ctaCv: 'Descargar CV',
     scroll: 'Desliza',
@@ -35,9 +35,9 @@ const es = {
     statement:
       'Me gusta llevar ideas a producción. Trabajo en todo el stack — Rust, TypeScript, Python y SQL — con obsesión por la seguridad, la privacidad de los datos y los detalles que el usuario nota.',
     body:
-      'Lidero el desarrollo técnico de Zeonida, un asistente de IA para procuradores y abogados que nunca guarda los datos del cliente, y he construido Inmovira, un SaaS inmobiliario que rastrea portales cada hora y verifica a los particulares con IA. Formación en Ingeniería de Software (U-tad, especialidad en Ingeniería de Datos) y en 42 Madrid.',
+      'Soy cofundador de Zeonida, un asistente de IA para procuradores y abogados que nunca guarda los datos del cliente, y de Inmovira, un SaaS inmobiliario que rastrea portales cada hora y verifica a los particulares con IA; de Inmovira desarrollé yo la plataforma y la web. Ambos están en fase piloto con sus primeros clientes. Curso el último año del Grado en Ingeniería de Software (U-tad, especialidad en Ingeniería de Datos) y me formé en 42 Madrid.',
     stats: [
-      { value: 2, suffix: '', label: 'productos SaaS en producción' },
+      { value: 2, suffix: '', label: 'productos SaaS cofundados, en piloto con clientes' },
       { value: 500, suffix: '+', label: 'commits en 2026' },
       { value: 24, suffix: 'h', label: 'rastreo continuo de portales' },
       { value: 0, suffix: '', label: 'datos personales que ve la IA de Zeonida' },
@@ -58,7 +58,7 @@ const es = {
       role: 'Cofundador · Ingeniero de software',
       tagline: 'Asistente de IA para procuradores y abogados. El despacho guarda; Zeonida piensa y olvida.',
       bullets: [
-        'Backend en Rust (Axum, Tokio, sqlx) y web en React 19 + TypeScript; versión 1.0.0 en producción en zeonida.com.',
+        'Backend en Rust (Axum, Tokio, sqlx) y web en React 19 + TypeScript; versión 1.0.0 desplegada en zeonida.com, en piloto con los primeros despachos.',
         'Seudonimización impuesta por el sistema de tipos: el modelo solo acepta texto seudonimizado. Núcleo compilado a WASM para un modo privado en el navegador.',
         'Reconocimiento de nombres con XLM-RoBERTa en ONNX Runtime, OCR con Tesseract y cómputo de plazos procesales (LEC, LOPJ) con los festivos de cada partido judicial.',
       ],
@@ -72,7 +72,7 @@ const es = {
       id: 'inmovira',
       name: 'Inmovira',
       year: '2026',
-      role: 'Fundador · Ingeniero full-stack',
+      role: 'Cofundador · Ingeniero full-stack',
       tagline: 'SaaS inmobiliario: detecta viviendas de particulares y las convierte en captaciones.',
       bullets: [
         'Motor de rastreo que monitoriza varios portales cada hora con proxies por país y un pipeline de IA en dos niveles que verifica a los anunciantes particulares.',
@@ -137,9 +137,9 @@ const es = {
       },
       {
         when: 'Jul 2026 — hoy',
-        what: 'Fundador · Ingeniero full-stack',
+        what: 'Cofundador · Ingeniero full-stack',
         where: 'Inmovira — PropTech',
-        text: 'Producto completo en producción: scraper distribuido, pipeline de IA, CRM multi-tenant, bot de WhatsApp y web pública.',
+        text: 'Desarrollé la plataforma completa, hoy en piloto con agencias: scraper distribuido, pipeline de IA, CRM multi-tenant, bot de WhatsApp y web pública.',
       },
       {
         when: '2021 — 2027',
@@ -184,7 +184,7 @@ const en: typeof es = {
   meta: {
     title: 'Luis Marquina — Full-stack software engineer · Applied AI',
     description:
-      'Full-stack software engineer. I build AI products in production: Zeonida (legal assistant in Rust + React) and Inmovira (real estate SaaS). Madrid, Spain.',
+      'Full-stack software engineer. Co-founder of two AI products piloting with early customers: Zeonida (legal assistant in Rust + React) and Inmovira (real estate SaaS). Final-year Software Engineering student. Madrid, Spain.',
   },
   nav: { work: 'Work', about: 'About', experience: 'Journey', contact: 'Contact', cv: 'CV', other: 'ES', otherHref: '/' },
   loader: 'Loading portfolio',
@@ -193,7 +193,7 @@ const en: typeof es = {
     lines: ['I build', 'software that', 'thinks.'],
     roles: ['Full-stack', 'Applied AI', 'Rust · TypeScript', 'Data', 'Product'],
     lead:
-      'I design, build and ship complete products: from the data model and security to the interface. Two AI-powered SaaS products in production in 2026.',
+      'I design, build and ship complete products: from the data model and security to the interface. In 2026 I co-founded and shipped two AI-powered SaaS products, now piloting with early customers.',
     ctaWork: 'See my work',
     ctaCv: 'Download CV',
     scroll: 'Scroll',
@@ -204,9 +204,9 @@ const en: typeof es = {
     statement:
       'I love taking ideas to production. I work across the stack — Rust, TypeScript, Python and SQL — obsessed with security, data privacy and the details users notice.',
     body:
-      'I lead the technical development of Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and I built Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI. Background in Software Engineering (U-tad, Data Engineering track) and 42 Madrid.',
+      'I co-founded Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI, where I built the platform and the website. Both are piloting with their first customers. I'm in the final year of a BSc in Software Engineering (U-tad, Data Engineering track) and trained at 42 Madrid.',
     stats: [
-      { value: 2, suffix: '', label: 'SaaS products in production' },
+      { value: 2, suffix: '', label: 'SaaS products co-founded, piloting with customers' },
       { value: 500, suffix: '+', label: 'commits in 2026' },
       { value: 24, suffix: 'h', label: 'continuous portal crawling' },
       { value: 0, suffix: '', label: 'personal data seen by Zeonida’s AI' },
@@ -219,14 +219,14 @@ const en: typeof es = {
       role: 'Co-founder · Software engineer',
       tagline: 'AI assistant for court representatives and lawyers. The firm keeps the data; Zeonida thinks and forgets.',
       bullets: [
-        'Rust backend (Axum, Tokio, sqlx) and React 19 + TypeScript web app; version 1.0.0 live at zeonida.com.',
+        'Rust backend (Axum, Tokio, sqlx) and React 19 + TypeScript web app; version 1.0.0 live at zeonida.com, piloting with the first law firms.',
         'Pseudonymisation enforced by the type system: the model port only accepts pseudonymised text. Core compiled to WASM for an in-browser private mode.',
         'Named-entity recognition with XLM-RoBERTa on ONNX Runtime, Tesseract OCR and procedural deadline computation with each judicial district’s holidays.',
       ],
     },
     {
       ...es.projects[1],
-      role: 'Founder · Full-stack engineer',
+      role: 'Co-founder · Full-stack engineer',
       tagline: 'Real estate SaaS: finds homes listed by private sellers and turns them into leads.',
       bullets: [
         'Crawler that monitors several listing portals every hour through per-country proxies, plus a two-stage AI pipeline that verifies private sellers.',
@@ -243,7 +243,7 @@ const en: typeof es = {
     title: 'Experience & education',
     items: [
       { when: 'Oct 2026 — now', what: 'Co-founder · Software engineer', where: 'Zeonida — LegalTech', text: 'Architecture and development of the stateless legal assistant: Rust API, React web app, pseudonymisation, AI on European servers, continuous deployment and observability.' },
-      { when: 'Jul 2026 — now', what: 'Founder · Full-stack engineer', where: 'Inmovira — PropTech', text: 'Complete product in production: distributed scraper, AI pipeline, multi-tenant CRM, WhatsApp bot and public website.' },
+      { when: 'Jul 2026 — now', what: 'Co-founder · Full-stack engineer', where: 'Inmovira — PropTech', text: 'Built the whole platform, now piloting with agencies: distributed scraper, AI pipeline, multi-tenant CRM, WhatsApp bot and public website.' },
       { when: '2021 — 2027', what: 'BSc Software Engineering', where: 'U-tad · Madrid', text: 'Data Engineering track: data modelling, pipelines, AI, computer vision, recommender systems and IoT.' },
       { when: '2023 — 2025', what: 'Intensive programming', where: '42 Madrid · Telefónica Foundation', text: 'Peer-to-peer, project-based methodology: C, algorithms, systems and teamwork.' },
     ],

@@ -31,7 +31,7 @@ export const cv = {
       extra: 'Disponibilidad e intereses',
     },
     profile:
-      'Ingeniero de software full-stack con dos productos SaaS con IA en producción. Diseño y desarrollo sistemas completos —backend en Rust y TypeScript, interfaces en React, Next.js y Astro, PostgreSQL y despliegue en la nube— con foco en seguridad, privacidad de los datos e inteligencia artificial aplicada. Formación en Ingeniería de Software (especialidad en Ingeniería de Datos) y en 42 Madrid.',
+      'Ingeniero de software full-stack en el último curso del Grado en Ingeniería de Software (especialidad en Ingeniería de Datos) y cofundador de dos productos SaaS con IA en fase piloto con clientes. Diseño y desarrollo sistemas completos —backend en Rust y TypeScript, interfaces en React, Next.js y Astro, PostgreSQL y despliegue en la nube— con foco en seguridad, privacidad de los datos e IA aplicada. Formación complementaria en 42 Madrid.',
     experience: [
       {
         org: 'Zeonida',
@@ -40,19 +40,19 @@ export const cv = {
         link: 'zeonida.com',
         when: 'Oct. 2026 – Actualidad',
         bullets: [
-          'Versión 1.0.0 (octubre de 2026) de un asistente de IA sin estado para procuradores y abogados: backend en <b>Rust</b> (Axum, Tokio, sqlx, PostgreSQL + pgvector) y web en <b>React 19 + TypeScript</b>.',
+          'Versión 1.0.0 (octubre de 2026), en piloto con los primeros despachos, de un asistente de IA sin estado para procuradores y abogados: backend en <b>Rust</b> (Axum, Tokio, sqlx, PostgreSQL + pgvector) y web en <b>React 19 + TypeScript</b>.',
           'Seudonimización garantizada por el sistema de tipos (la IA solo recibe texto seudonimizado), núcleo en <b>WebAssembly</b> para un modo privado en el navegador, NER con XLM-RoBERTa en <b>ONNX Runtime</b> y OCR.',
           'Cómputo de plazos procesales (LEC, LOPJ) con festivos por partido judicial; despliegue continuo en Docker y Cloudflare con Sentry. MVP previo en FastAPI + Next.js con 2FA y AES-256-GCM.',
         ],
       },
       {
         org: 'Inmovira',
-        role: 'Fundador e Ingeniero Full-Stack',
+        role: 'Cofundador e Ingeniero Full-Stack',
         meta: 'SaaS inmobiliario · IA',
         link: 'inmovira.com',
         when: 'Jul. 2026 – Actualidad',
         bullets: [
-          'Motor de rastreo que monitoriza varios portales inmobiliarios cada hora con proxies por país y un pipeline de IA en dos niveles que verifica a los anunciantes particulares.',
+          'Desarrollo de la plataforma completa, en piloto con agencias. Motor de rastreo que monitoriza varios portales inmobiliarios cada hora con proxies por país y un pipeline de IA en dos niveles que verifica a los anunciantes particulares.',
           'CRM multi-tenant con aislamiento por agencia, alertas en tiempo real por WhatsApp (Gemini) e historial de precios por vivienda.',
           'API en <b>Express 5 + TypeScript</b> (Zod, JWT con rotación de refresh tokens, CSP), web en <b>Astro + Tailwind</b> y despliegue propio en VPS Linux.',
         ],
@@ -64,7 +64,7 @@ export const cv = {
       { name: 'Campus 42', meta: 'C', text: 'libft, push_swap y ft_printf: algoritmos y estructuras de datos sin librerías.' },
     ],
     education: [
-      { org: 'U-tad (Centro Universitario de Tecnología y Arte Digital)', what: 'Grado en Ingeniería de Software · Especialidad en Ingeniería de Datos', where: 'Las Rozas, Madrid', when: '2021 – 2027', text: 'Pipelines de datos, IA, visión por computador, sistemas de recomendación e IoT.' },
+      { org: 'U-tad (Centro Universitario de Tecnología y Arte Digital)', what: 'Grado en Ingeniería de Software · Especialidad en Ingeniería de Datos · Último curso', where: 'Las Rozas, Madrid', when: '2021 – 2027', text: 'Pipelines de datos, IA, visión por computador, sistemas de recomendación e IoT.' },
       { org: '42 Madrid (Fundación Telefónica)', what: 'Formación intensiva en programación · metodología peer-to-peer', where: 'Madrid', when: '2023 – 2025', text: '' },
     ],
     skills: [
@@ -96,7 +96,7 @@ export const cv = {
       extra: 'Availability & interests',
     },
     profile:
-      'Full-stack software engineer with two AI-powered SaaS products in production. I design and build complete systems —Rust and TypeScript backends, React, Next.js and Astro front-ends, PostgreSQL and cloud deployment— with a focus on security, data privacy and applied artificial intelligence. Background in Software Engineering (Data Engineering track) and 42 Madrid.',
+      'Full-stack software engineer in the final year of a BSc in Software Engineering (Data Engineering track) and co-founder of two AI-powered SaaS products piloting with early customers. I design and build complete systems —Rust and TypeScript backends, React, Next.js and Astro front-ends, PostgreSQL and cloud deployment— with a focus on security, data privacy and applied AI. Additional training at 42 Madrid.',
     experience: [
       {
         org: 'Zeonida',
@@ -105,19 +105,19 @@ export const cv = {
         link: 'zeonida.com',
         when: 'Oct 2026 – Present',
         bullets: [
-          'Version 1.0.0 (October 2026) of a stateless AI assistant for Spanish court representatives and lawyers: <b>Rust</b> backend (Axum, Tokio, sqlx, PostgreSQL + pgvector) and <b>React 19 + TypeScript</b> web app.',
+          'Version 1.0.0 (October 2026), piloting with the first law firms, of a stateless AI assistant for Spanish court representatives and lawyers: <b>Rust</b> backend (Axum, Tokio, sqlx, PostgreSQL + pgvector) and <b>React 19 + TypeScript</b> web app.',
           'Pseudonymisation enforced by the type system (the AI only receives pseudonymised text), <b>WebAssembly</b> core for an in-browser private mode, NER with XLM-RoBERTa on <b>ONNX Runtime</b> and OCR.',
           'Procedural deadline engine with each judicial district’s holidays; continuous deployment on Docker and Cloudflare with Sentry. Earlier MVP in FastAPI + Next.js with 2FA and AES-256-GCM.',
         ],
       },
       {
         org: 'Inmovira',
-        role: 'Founder & Full-Stack Engineer',
+        role: 'Co-founder & Full-Stack Engineer',
         meta: 'Real estate SaaS · AI',
         link: 'inmovira.com',
         when: 'Jul 2026 – Present',
         bullets: [
-          'Crawler that monitors several real estate portals every hour through per-country proxies, plus a two-stage AI pipeline that verifies private sellers.',
+          'Built the whole platform, now piloting with agencies. Crawler that monitors several real estate portals every hour through per-country proxies, plus a two-stage AI pipeline that verifies private sellers.',
           'Multi-tenant CRM with per-agency isolation, real-time WhatsApp alerts (Gemini) and price history per property.',
           '<b>Express 5 + TypeScript</b> API (Zod, rotating JWT refresh tokens, CSP), <b>Astro + Tailwind</b> website and self-managed Linux VPS deployment.',
         ],
@@ -129,7 +129,7 @@ export const cv = {
       { name: '42 Madrid', meta: 'C', text: 'libft, push_swap and ft_printf: algorithms and data structures from scratch.' },
     ],
     education: [
-      { org: 'U-tad (University Centre of Technology and Digital Art)', what: 'BSc in Software Engineering · Data Engineering track', where: 'Madrid', when: '2021 – 2027', text: 'Data pipelines, AI, computer vision, recommender systems and IoT.' },
+      { org: 'U-tad (University Centre of Technology and Digital Art)', what: 'BSc in Software Engineering · Data Engineering track · Final year', where: 'Madrid', when: '2021 – 2027', text: 'Data pipelines, AI, computer vision, recommender systems and IoT.' },
       { org: '42 Madrid (Telefónica Foundation)', what: 'Intensive programming training · peer-to-peer methodology', where: 'Madrid', when: '2023 – 2025', text: '' },
     ],
     skills: [
