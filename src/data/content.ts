@@ -35,7 +35,7 @@ const es = {
     statement:
       'Me gusta llevar ideas a producción. Trabajo en todo el stack — Rust, TypeScript, Python y SQL — con obsesión por la seguridad, la privacidad de los datos y los detalles que el usuario nota.',
     body:
-      'Soy cofundador de Zeonida, un asistente de IA para procuradores y abogados que nunca guarda los datos del cliente, y de Inmovira, un SaaS inmobiliario que rastrea portales cada hora y verifica a los particulares con IA; de Inmovira desarrollé yo la plataforma y la web. Ambos están en fase piloto con sus primeros clientes. Curso el último año del Grado en Ingeniería de Software (U-tad, especialidad en Ingeniería de Datos) y me formé en 42 Madrid.',
+      'Soy cofundador de Zeonida, un asistente de IA para procuradores y abogados que nunca guarda los datos del cliente, y de Inmovira, un SaaS inmobiliario que rastrea portales cada hora y verifica a los particulares con IA. En los dos trabajo en todo el stack, del backend a la interfaz, y ambos están en fase piloto con sus primeros clientes. Curso el último año del Grado en Ingeniería de Software (U-tad, especialidad en Ingeniería de Datos) y me formé en 42 Madrid.',
     stats: [
       { value: 2, suffix: '', label: 'productos SaaS cofundados, en piloto con clientes' },
       { value: 500, suffix: '+', label: 'commits en 2026' },
@@ -139,7 +139,7 @@ const es = {
         when: 'Jul 2026 — hoy',
         what: 'Cofundador · Ingeniero full-stack',
         where: 'Inmovira — PropTech',
-        text: 'Desarrollé la plataforma completa, hoy en piloto con agencias: scraper distribuido, pipeline de IA, CRM multi-tenant, bot de WhatsApp y web pública.',
+        text: 'Plataforma en piloto con agencias: scraper distribuido, pipeline de IA, CRM multi-tenant, bot de WhatsApp y web pública.',
       },
       {
         when: '2021 — 2027',
@@ -204,7 +204,7 @@ const en: typeof es = {
     statement:
       'I love taking ideas to production. I work across the stack — Rust, TypeScript, Python and SQL — obsessed with security, data privacy and the details users notice.',
     body:
-      'I co-founded Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI, where I built the platform and the website. Both are piloting with their first customers. I’m in the final year of a BSc in Software Engineering (U-tad, Data Engineering track) and trained at 42 Madrid.',
+      'I co-founded Zeonida, an AI assistant for Spanish court representatives and lawyers that never stores client data, and Inmovira, a real estate SaaS that crawls listing portals every hour and verifies private sellers with AI. I work across the whole stack on both, from backend to interface, and both are piloting with their first customers. I’m in the final year of a BSc in Software Engineering (U-tad, Data Engineering track) and trained at 42 Madrid.',
     stats: [
       { value: 2, suffix: '', label: 'SaaS products co-founded, piloting with customers' },
       { value: 500, suffix: '+', label: 'commits in 2026' },
@@ -243,7 +243,7 @@ const en: typeof es = {
     title: 'Experience & education',
     items: [
       { when: 'Oct 2026 — now', what: 'Co-founder · Software engineer', where: 'Zeonida — LegalTech', text: 'Architecture and development of the stateless legal assistant: Rust API, React web app, pseudonymisation, AI on European servers, continuous deployment and observability.' },
-      { when: 'Jul 2026 — now', what: 'Co-founder · Full-stack engineer', where: 'Inmovira — PropTech', text: 'Built the whole platform, now piloting with agencies: distributed scraper, AI pipeline, multi-tenant CRM, WhatsApp bot and public website.' },
+      { when: 'Jul 2026 — now', what: 'Co-founder · Full-stack engineer', where: 'Inmovira — PropTech', text: 'Platform piloting with agencies: distributed scraper, AI pipeline, multi-tenant CRM, WhatsApp bot and public website.' },
       { when: '2021 — 2027', what: 'BSc Software Engineering', where: 'U-tad · Madrid', text: 'Data Engineering track: data modelling, pipelines, AI, computer vision, recommender systems and IoT.' },
       { when: '2023 — 2025', what: 'Intensive programming', where: '42 Madrid · Telefónica Foundation', text: 'Peer-to-peer, project-based methodology: C, algorithms, systems and teamwork.' },
     ],

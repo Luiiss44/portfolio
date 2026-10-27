@@ -37,3 +37,4 @@
 - Lag: shader con 4 octavas (antes 6), render al 35 % de la resolución CSS y a 30 fps; capa de grano estática (antes animada y al 200 % de la pantalla); cursor sin mix-blend-mode ni transiciones de tamaño; menú sin backdrop-filter; scroll más directo (Lenis lerp 0.14, scrub 0.3).
 - Foto: nueva versión 960×1200 (4:5, calidad 90) sin el filtro gris que solo se quitaba al pasar el ratón.
 - Etiquetas de sección sin raya ni mayúsculas espaciadas: cursiva serif en color de acento; «Perfil» pasa a «Sobre mí».
+- Quitada la frase «de Inmovira desarrollé yo la plataforma y la web» (y «built the platform…») en web, CV y LinkedIn. En su lugar: «En los dos trabajo en todo el stack, del backend a la interfaz».

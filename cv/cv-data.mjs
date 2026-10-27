@@ -52,7 +52,7 @@ export const cv = {
         link: 'inmovira.com',
         when: 'Jul. 2026 – Actualidad',
         bullets: [
-          'Desarrollo de la plataforma completa, en piloto con agencias. Motor de rastreo que monitoriza varios portales inmobiliarios cada hora con proxies por país y un pipeline de IA en dos niveles que verifica a los anunciantes particulares.',
+          'En piloto con agencias. Motor de rastreo que monitoriza varios portales inmobiliarios cada hora con proxies por país y un pipeline de IA en dos niveles que verifica a los anunciantes particulares.',
           'CRM multi-tenant con aislamiento por agencia, alertas en tiempo real por WhatsApp (Gemini) e historial de precios por vivienda.',
           'API en <b>Express 5 + TypeScript</b> (Zod, JWT con rotación de refresh tokens, CSP), web en <b>Astro + Tailwind</b> y despliegue propio en VPS Linux.',
         ],
@@ -117,7 +117,7 @@ export const cv = {
         link: 'inmovira.com',
         when: 'Jul 2026 – Present',
         bullets: [
-          'Built the whole platform, now piloting with agencies. Crawler that monitors several real estate portals every hour through per-country proxies, plus a two-stage AI pipeline that verifies private sellers.',
+          'Piloting with agencies. Crawler that monitors several real estate portals every hour through per-country proxies, plus a two-stage AI pipeline that verifies private sellers.',
           'Multi-tenant CRM with per-agency isolation, real-time WhatsApp alerts (Gemini) and price history per property.',
           '<b>Express 5 + TypeScript</b> API (Zod, rotating JWT refresh tokens, CSP), <b>Astro + Tailwind</b> website and self-managed Linux VPS deployment.',
         ],
