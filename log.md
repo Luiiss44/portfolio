@@ -10,3 +10,9 @@
   - Quitada la línea «prácticas curriculares sujetas a convenio con U-tad» (se puede recuperar en `cv/cv-data.mjs`).
   - Añadidos Rust, Astro, Axum, FastAPI, pgvector, ONNX Runtime, Turso, GitHub Actions, Cloudflare y Sentry.
 - Limitación: la versión pública del CV no incluye el teléfono; el repo es público y el teléfono vive en `cv/private.json` (ignorado).
+- Repo `Luiiss44/portfolio` creado **privado**: el control de permisos bloqueó crearlo público sin confirmación expresa. Pendiente: hacerlo público, activar Pages y crear el CNAME `luis` en el DNS de inmovira.com (Cloudflare).
+- LinkedIn (copia del estado anterior en `raw/linkedin-2026-10-27-antes.md`):
+  - Titular: «Ingeniero de Software Full-Stack · IA aplicada | Rust · TypeScript · Python | Cofundador de Zeonida (LegalTech) · Fundador de Inmovira (PropTech)». Ojo: LinkedIn sustituye el titular por el último puesto al añadir una experiencia; hubo que reponerlo.
+  - «Acerca de» reescrito sin «Soy estudiante…», con Zeonida, Inmovira y enlace al portfolio.
+  - Experiencia añadida: Zeonida (oct. 2026–hoy) e Inmovira (jul. 2026–hoy), sin avisar a la red ni publicar en el feed.
+  - Aptitudes nuevas: Rust y PostgreSQL (vinculadas a Zeonida). Educación sin cambios.
