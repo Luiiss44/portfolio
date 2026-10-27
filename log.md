@@ -40,3 +40,5 @@
 - Quitada la frase «de Inmovira desarrollé yo la plataforma y la web» (y «built the platform…») en web, CV y LinkedIn. En su lugar: «En los dos trabajo en todo el stack, del backend a la interfaz».
 - Quitado «Disponible para nuevos proyectos» con el punto verde; en su lugar, el nombre de Luis sobre el titular.
 - Más lag eliminado: fuera Lenis (scroll nativo, sin retardo; los enlaces internos se deslizan con scrollIntoView), fuera la capa de grano, menú con fondo sólido en vez de backdrop-filter, marquesina pausada fuera de pantalla y sin crear tweens en cada evento de scroll, pantalla de carga de ~3 s a ~1,5 s.
+- Foto: ahora es la de perfil de LinkedIn (800×800, descargada por Claude con permiso de Luis, original en cv/fuentes/, fuera de Git), recortada a 4:5 en 640×800, sin parallax ni zoom extra.
+- Menú superior: la animación de entrada dejaba un transform residual que lo cortaba y anulaba el ocultado al hacer scroll; arreglado con clearProps.

@@ -36,7 +36,8 @@ function intro() {
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
   tl.to('.hero__title .line__in', { y: 0, duration: 1.6, stagger: 0.12 })
     .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.2, stagger: 0.08 }, '-=1.1')
-    .from('.nav', { y: -30, opacity: 0, duration: 1 }, '-=1.2');
+    // clearProps hands the transform back to CSS so the hide-on-scroll class keeps working.
+    .fromTo('.nav', { y: -30, autoAlpha: 0, transition: 'none' }, { y: 0, autoAlpha: 1, duration: 1, clearProps: 'all' }, '-=1.2');
   return tl;
 }
 
@@ -136,7 +137,7 @@ function scrollFx() {
     });
   }
 
-  // Photo: unclip + inner parallax
+  // Photo: unclip
   const photo = $('[data-photo]');
   if (photo) {
     gsap.from(photo.querySelector('.about__photo-mask'), {
@@ -144,11 +145,6 @@ function scrollFx() {
       duration: 1.6,
       ease: 'expo.inOut',
       scrollTrigger: { trigger: photo, start: 'top 80%' },
-    });
-    gsap.fromTo(photo.querySelector('img'), { yPercent: -6 }, {
-      yPercent: 0,
-      ease: 'none',
-      scrollTrigger: { trigger: '.about', start: 'top bottom', end: 'bottom top', scrub: true },
     });
   }
 
