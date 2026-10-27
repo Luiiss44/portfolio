@@ -1,7 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import Lenis from 'lenis';
 import { startShader } from './shader';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -12,24 +11,18 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const $ = <T extends Element = HTMLElement>(s: string, el: ParentNode = document) => el.querySelector<T>(s);
 const $$ = <T extends Element = HTMLElement>(s: string, el: ParentNode = document) => Array.from(el.querySelectorAll<T>(s));
 
-/* ---------- Smooth scroll ---------- */
-let lenis: Lenis | null = null;
-if (!reduced) {
-  lenis = new Lenis({ lerp: 0.14, smoothWheel: true });
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis!.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
-}
-// In-page anchors go through Lenis so they glide instead of jumping.
+/* ---------- Scroll ----------
+   Native scrolling on purpose: a smooth-scroll library interpolates the wheel and
+   always feels a beat behind the hand. Only in-page anchors glide. */
+const behavior: ScrollBehavior = reduced ? 'auto' : 'smooth';
 $$<HTMLAnchorElement>('a[href^="#"]').forEach((a) =>
   a.addEventListener('click', (e) => {
     const id = a.getAttribute('href')!;
-    const target = id === '#top' ? 0 : $(id);
-    if (target === null) return;
+    const target = id === '#top' ? null : $(id);
+    if (id !== '#top' && !target) return;
     e.preventDefault();
-    if (lenis) lenis.scrollTo(target as HTMLElement | number, { offset: 0, duration: 1.4 });
-    else if (target === 0) window.scrollTo({ top: 0 });
-    else (target as HTMLElement).scrollIntoView();
+    if (target) target.scrollIntoView({ behavior });
+    else window.scrollTo({ top: 0, behavior });
   }),
 );
 
@@ -54,27 +47,26 @@ function runLoader() {
     document.body.classList.remove('is-loading');
     return;
   }
-  lenis?.stop();
+  // Short on purpose: the page is ready almost at once, so a long counter only reads as slowness.
   const state = { v: 0 };
   const tl = gsap.timeline();
   tl.to(state, {
     v: 100,
-    duration: 1.8,
-    ease: 'power3.inOut',
+    duration: 0.8,
+    ease: 'power2.inOut',
     onUpdate: () => {
       if (count) count.textContent = String(Math.round(state.v));
     },
   })
-    .to('.loader__bar span', { width: '100%', duration: 1.8, ease: 'power3.inOut' }, 0)
-    .to('.loader__inner', { yPercent: -120, opacity: 0, duration: 0.7, ease: 'power3.in' })
-    .to(loader, { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'expo.inOut' }, '-=0.2')
+    .to('.loader__bar span', { width: '100%', duration: 0.8, ease: 'power2.inOut' }, 0)
+    .to('.loader__inner', { yPercent: -120, opacity: 0, duration: 0.4, ease: 'power3.in' })
+    .to(loader, { clipPath: 'inset(0 0 100% 0)', duration: 0.7, ease: 'expo.inOut' }, '-=0.15')
     .add(() => {
       document.body.classList.remove('is-loading');
       loader.remove();
-      lenis?.start();
       ScrollTrigger.refresh();
     })
-    .add(intro(), '-=0.55');
+    .add(intro(), '-=0.45');
 }
 
 /* ---------- Rotating roles ---------- */
@@ -244,22 +236,19 @@ function work() {
 function marquee() {
   const row = $('[data-marquee]');
   if (!row || reduced) return;
-  const loop = gsap.to(row, { xPercent: -50, duration: 40, ease: 'none', repeat: -1 });
-  const skew = gsap.quickTo(row, 'skewX', { duration: 0.5, ease: 'power3' });
+  const loop = gsap.to(row, { xPercent: -50, duration: 40, ease: 'none', repeat: -1, paused: true });
+  // One reusable tween eases the speed back down instead of creating new tweens on every scroll event.
+  const speed = { v: 1 };
+  const settle = gsap.to(speed, { v: 1, duration: 1.2, ease: 'power2.out', paused: true, onUpdate: () => { loop.timeScale(speed.v); } });
   ScrollTrigger.create({
+    trigger: row,
+    start: 'top bottom',
+    end: 'bottom top',
+    onToggle: (st) => (st.isActive ? loop.play() : loop.pause()),
     onUpdate: (st) => {
-      const v = st.getVelocity();
-      const dir = st.direction || 1;
-      skew(gsap.utils.clamp(-8, 8, v / -300));
-      gsap.to(loop, {
-        timeScale: dir * (1 + Math.min(Math.abs(v) / 300, 5)),
-        duration: 0.2,
-        overwrite: true,
-        onComplete: () => {
-          skew(0);
-          gsap.to(loop, { timeScale: dir, duration: 1.2 });
-        },
-      });
+      speed.v = (st.direction || 1) * (1 + Math.min(Math.abs(st.getVelocity()) / 400, 4));
+      loop.timeScale(speed.v);
+      settle.invalidate().restart();
     },
   });
 }
@@ -335,8 +324,7 @@ function nav() {
     el.classList.toggle('is-hidden', y > last && y > window.innerHeight * 0.8);
     last = y;
   };
-  if (lenis) lenis.on('scroll', ({ scroll }: { scroll: number }) => onScroll(scroll));
-  else window.addEventListener('scroll', () => onScroll(window.scrollY), { passive: true });
+  window.addEventListener('scroll', () => onScroll(window.scrollY), { passive: true });
 }
 
 /* ---------- Copy email ---------- */

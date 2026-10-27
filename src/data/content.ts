@@ -28,7 +28,6 @@ const es = {
     ctaWork: 'Ver proyectos',
     ctaCv: 'Descargar CV',
     scroll: 'Desliza',
-    available: 'Disponible para nuevos proyectos',
   },
   about: {
     label: 'Sobre mí',
@@ -197,7 +196,6 @@ const en: typeof es = {
     ctaWork: 'See my work',
     ctaCv: 'Download CV',
     scroll: 'Scroll',
-    available: 'Open to new opportunities',
   },
   about: {
     label: 'About me',

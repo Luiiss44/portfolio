@@ -20,7 +20,6 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
   </div>
 
   <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em></em></span></div>
-  <div class="grain" aria-hidden="true"></div>
 
   <header class="nav" data-nav>
     <a class="nav__logo" href={base} aria-label={site.name}>
@@ -45,7 +44,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
       <div class="hero__vignette" aria-hidden="true"></div>
       <div class="hero__content wrap">
         <p class="eyebrow hero__eyebrow" data-hero-fade>
-          <span class="pulse"></span>{t.hero.available}
+          {site.name}
         </p>
         <h1 class="hero__title" aria-label={t.hero.lines.join(' ')}>
           {t.hero.lines.map((line, i) => (

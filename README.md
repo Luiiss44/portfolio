@@ -2,7 +2,7 @@
 
 Personal site of **Luis Marquina Rodríguez**, full-stack software engineer. Live at **[luis.inmovira.com](https://luis.inmovira.com)**.
 
-Built with [Astro](https://astro.build), [GSAP](https://gsap.com) (ScrollTrigger, SplitText), [Lenis](https://lenis.darkroom.engineering) and a hand-written WebGL shader. Spanish and English, static, no tracking. Animations turn off with `prefers-reduced-motion`.
+Built with [Astro](https://astro.build), [GSAP](https://gsap.com) (ScrollTrigger, SplitText) and a hand-written WebGL shader. Spanish and English, static, no tracking. Animations turn off with `prefers-reduced-motion`.
 
 ```bash
 pnpm install

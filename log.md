@@ -38,3 +38,5 @@
 - Foto: nueva versión 960×1200 (4:5, calidad 90) sin el filtro gris que solo se quitaba al pasar el ratón.
 - Etiquetas de sección sin raya ni mayúsculas espaciadas: cursiva serif en color de acento; «Perfil» pasa a «Sobre mí».
 - Quitada la frase «de Inmovira desarrollé yo la plataforma y la web» (y «built the platform…») en web, CV y LinkedIn. En su lugar: «En los dos trabajo en todo el stack, del backend a la interfaz».
+- Quitado «Disponible para nuevos proyectos» con el punto verde; en su lugar, el nombre de Luis sobre el titular.
+- Más lag eliminado: fuera Lenis (scroll nativo, sin retardo; los enlaces internos se deslizan con scrollIntoView), fuera la capa de grano, menú con fondo sólido en vez de backdrop-filter, marquesina pausada fuera de pantalla y sin crear tweens en cada evento de scroll, pantalla de carga de ~3 s a ~1,5 s.
