@@ -28,4 +28,6 @@
   - Puestos: «Co-founder & Software Engineer» (Zeonida) y «Co-founder & Full-Stack Engineer» (Inmovira), descripción en inglés, sin tipo de empleo (antes «Autónomo», que sugería alta como autónomo).
   - Sin avisar a la red ni publicar en el feed.
 - Luis pide quitar «Final-year» y «@ U-tad», y después que no se repita «Software Engineer» ni se use «@». Titular final: «Software Engineering Student | Full-Stack & AI Developer | Rust, TypeScript, React | Co-founder of Zeonida and Inmovira» (perfil + habilidades + señal de valor, palabras clave al principio).
+- Información de contacto: luis.inmovira.com (cartera), inmovira.com y zeonida.com (empresa), github.com/Luiiss44 (otro). LinkedIn admitió 4 sitios aunque varias guías hablan de 3.
+- Zeonida e Inmovira se mantienen en «Experiencia»: tienen producto desplegado, clientes piloto y Luis es cofundador con socios; las descripciones ya dicen que están en piloto.
 - «Acerca de» reescrito siguiendo buenas prácticas investigadas: gancho con palabras clave en los ~200 primeros caracteres (lo visible antes de «ver más»), primera persona, proyectos con datos, lista de skills y cierre con email, portfolio y GitHub; unas 230 palabras.
