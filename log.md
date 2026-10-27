@@ -27,5 +27,5 @@
   - «Acerca de» en inglés, abierto también a prácticas («roles and internships»).
   - Puestos: «Co-founder & Software Engineer» (Zeonida) y «Co-founder & Full-Stack Engineer» (Inmovira), descripción en inglés, sin tipo de empleo (antes «Autónomo», que sugería alta como autónomo).
   - Sin avisar a la red ni publicar en el feed.
-- Luis pide quitar «Final-year» y «@ U-tad». Titular final: «Software Engineer | Software Engineering student | Rust · TypeScript · AI | Co-founder @ Zeonida & Inmovira».
+- Luis pide quitar «Final-year» y «@ U-tad», y después que no se repita «Software Engineer» ni se use «@». Titular final: «Software Engineering Student | Full-Stack & AI Developer | Rust, TypeScript, React | Co-founder of Zeonida and Inmovira» (perfil + habilidades + señal de valor, palabras clave al principio).
 - «Acerca de» reescrito siguiendo buenas prácticas investigadas: gancho con palabras clave en los ~200 primeros caracteres (lo visible antes de «ver más»), primera persona, proyectos con datos, lista de skills y cierre con email, portfolio y GitHub; unas 230 palabras.
