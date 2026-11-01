@@ -43,3 +43,7 @@
 - Foto: ahora es la de perfil de LinkedIn (800×800, descargada por Claude con permiso de Luis, original en cv/fuentes/, fuera de Git), recortada a 4:5 en 640×800, sin parallax ni zoom extra.
 - Menú superior: la animación de entrada dejaba un transform residual que lo cortaba y anulaba el ocultado al hacer scroll; arreglado con clearProps.
 - La foto parecía tardar en cargar: era la animación de destapado (1,6 s, desde el 80 % de pantalla). Ahora aparece en 0,5 s nada más asomar; textos y títulos también aparecen antes y más rápido (0,7 s).
+
+## 2026-11-01 — Titular
+
+- Titular de portada cambiado de «Construyo software que piensa.» (cursi) a «Ingeniero de software full-stack.» / «Full-stack software engineer.»; la línea pequeña de roles pasa a «Madrid» para no repetirlo. Imagen para compartir (og.jpg) regenerada.

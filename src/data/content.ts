@@ -20,8 +20,8 @@ const es = {
   nav: { work: 'Proyectos', about: 'Sobre mí', experience: 'Trayectoria', contact: 'Contacto', cv: 'CV', other: 'EN', otherHref: '/en/' },
   loader: 'Cargando portfolio',
   hero: {
-    eyebrow: 'Ingeniero de software · Madrid',
-    lines: ['Construyo', 'software que', 'piensa.'],
+    eyebrow: 'Madrid',
+    lines: ['Ingeniero', 'de software', 'full-stack.'],
     roles: ['Full-stack', 'IA aplicada', 'Rust · TypeScript', 'Datos', 'Producto'],
     lead:
       'Diseño, programo y despliego productos completos: del modelo de datos y la seguridad a la interfaz. En 2026 he cofundado y lanzado dos SaaS con IA, ya en piloto con sus primeros clientes.',
@@ -188,8 +188,8 @@ const en: typeof es = {
   nav: { work: 'Work', about: 'About', experience: 'Journey', contact: 'Contact', cv: 'CV', other: 'ES', otherHref: '/' },
   loader: 'Loading portfolio',
   hero: {
-    eyebrow: 'Software engineer · Madrid',
-    lines: ['I build', 'software that', 'thinks.'],
+    eyebrow: 'Madrid, Spain',
+    lines: ['Full-stack', 'software', 'engineer.'],
     roles: ['Full-stack', 'Applied AI', 'Rust · TypeScript', 'Data', 'Product'],
     lead:
       'I design, build and ship complete products: from the data model and security to the interface. In 2026 I co-founded and shipped two AI-powered SaaS products, now piloting with early customers.',
